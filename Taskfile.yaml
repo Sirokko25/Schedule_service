@@ -1,0 +1,15 @@
+version: "3"
+
+vars:
+  ENV: "local"
+  ENV_FILE: "env/{{.ENV}}.sh"
+  COMPOSE_FILE: "docker/{{.ENV}}-docker-compose.yml"
+  CONTAINER_ID: ""
+
+tasks:
+  build:
+      desc: "Запуск среды с опцией сборки. Пример: task build ENV=local"
+      vars:
+        ENV: "{{.ENV}}"
+      cmds:
+        - source {{.ENV_FILE}} && docker compose -f  {{.COMPOSE_FILE}} down && docker compose -f {{.COMPOSE_FILE}} up --build -d
