@@ -36,7 +36,6 @@ func (db DB) NextTakings(user_id string) ([]models.Medicine, error) {
 			log.Print(errorlist.ErrorDeserializinJson)
 			return nil, errors.New(errorlist.ErrorDeserializinJson)
 		}
-		log.Print(chartUnmarshal)
 		time, err := helpers.CheckChart(chartUnmarshal)
 		if err != nil {
 			log.Print("Error when checking the nearest medication intake time")

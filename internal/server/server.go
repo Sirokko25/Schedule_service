@@ -37,7 +37,7 @@ func StartServer() error {
 	}()
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
-	router.POST("/shedule", handlers.AddShedule) //добавить проверку на повторение расписаний
+	router.POST("/shedule", handlers.AddShedule)
 	router.GET("/shedules/", handlers.GetShedules)
 	router.GET("/shedule", handlers.GetShedule)
 	router.GET("/next_takings", handlers.GetNextTakings)

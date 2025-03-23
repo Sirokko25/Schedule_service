@@ -9,6 +9,6 @@ import (
 func main() {
 	err := server.StartServer()
 	if err != nil {
-		log.Printf("")
+		log.Printf("Error star server: %v", err)
 	}
 }
