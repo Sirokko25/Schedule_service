@@ -6,8 +6,8 @@ Golang, PostgreSQL, Gin, BunORM, Docker
 ### Склонируйте репозиторий
 
 ```
-git clone git@github.com:Sirokko25/Cybersecurity-Center.git
-cd final
+git clone https://github.com/Sirokko25/Schedule_service.git
+cd Sсhedule_service
 go mod tidy
 ```
 
@@ -36,16 +36,15 @@ go mod tidy
 - server/: Директория в которой запускается сервер, определяются роутеры, запускается подключение к бд.
 - docker/: Директория с конфигурациями Docker контейнеров
     - local-docker-compose.yml: Файл конфигурации для управления Docker-контейнерами
-- Task.yaml: Скрипты командной оболочки для сборки Docker контейнеров 
+- Taskfile.yaml: Скрипты командной оболочки для сборки Docker контейнеров 
 - Dockerfile: Набор инструкций для автоматизированной сборки образа Docker
 - postman/: Директория с postman коллекцией тестовых запросов
 - internal/: Директория с логикой проекта:
     - errorlist/: Пакет c набором ошибок.
     - handlers/: Пакет с обработчиками API запросов.
-        - base.go: 
         - AppendShedule.go: Ручка для добавления расписания в бд
         - GetShedule.go: Ручка для получения расписания по user_id и shedule_id
-        - GetShedules.go: Ручка для получения расписаний для пользователя по user_id
+        - GetShedules.go: Ручка получения расписаний для пользователя по user_id
         - GetNextTakings.go: Ручка для получения информации о времени приема лекарств для пользователя по user_id
     - storage/: Пакет для инициализации и работы с базой данных
         - base.go: Хранит структуры для создания таблиц и интерфейс для взаимодействия с бд
@@ -63,4 +62,4 @@ go mod tidy
         - EndDateCalculate.go: Для расчёта конечной даты приема лекарств
         - ValidateShedule.go: Для валидации поступающих расписаний
         - CheckChart.go: Для проверки времени ближайшего приёма лекарств
-        - CreateResponceString.go: Создани строки ответа поиска расписаний для пользователя по user_id
+        - CreateResponceString.go: Создание строки ответа поиска расписаний для пользователя по user_id
