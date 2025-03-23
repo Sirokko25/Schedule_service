@@ -12,4 +12,4 @@ tasks:
       vars:
         ENV: "{{.ENV}}"
       cmds:
-        - source {{.ENV_FILE}} && docker compose -f  {{.COMPOSE_FILE}} down && docker compose -f {{.COMPOSE_FILE}} up --build -d
+        - source {{.ENV_FILE}} && docker compose -f {{.COMPOSE_FILE}} up --build -d
