@@ -6,7 +6,7 @@ Golang, PostgreSQL, Gin, BunORM, Docker
 ### Склонируйте репозиторий
 
 ```
-git clone git@github.com:Sirokko25/Cybersecurity-Center.git
+git clone https://github.com/Sirokko25/Shedule_service.git
 cd final
 go mod tidy
 ```
