@@ -8,6 +8,7 @@ import (
 	"github.com/uptrace/bun"
 
 	"sheduler/internal/models"
+
 )
 
 type DB struct {
@@ -34,7 +35,7 @@ type HistoryShedulesStruct struct {
 	SheduleId    int64     `bun:"shedule_id,pk,autoincrement"`
 	MedicineName string    `bun:"medicine_name,notnull"`
 	UserId       int64     `bun:"user_id,notnull"`
-	StartDate    time.Time `bun:"start_date,nullzero,default:now()"`
+	StartDate    time.Time `bun:"start_date,notnull"`
 	EndDate      time.Time `bun:"end_date,notnull"`
 }
 

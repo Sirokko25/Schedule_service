@@ -30,10 +30,12 @@ func (db DB) Actualize() {
 		result, err := db.conn.NewDelete().Model(&shedules).Where("shedule_id = ?", shedule.SheduleId).Exec(ctx)
 		if err != nil {
 			log.Printf("Error deleting the schedule: %v", err)
+			return
 		}
 		rowsAffected, _ := result.RowsAffected()
 		if rowsAffected == 0 {
 			log.Print("No records were found.")
+			return
 		}
 		log.Printf("Rows deleted: %d", rowsAffected)
 	}
