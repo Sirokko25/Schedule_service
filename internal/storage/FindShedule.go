@@ -26,7 +26,7 @@ func (db DB) FindShedule(user_id string, shedule_id string) (models.SheduleWithC
 			WhereOr("status = ?", "permanent")
 	}).Scan(context.Background())
 	if err != nil {
-		log.Print("errorlist.ErrorFindShedule")
+		log.Print(errorlist.ErrorFindShedule)
 		return models.SheduleWithChart{}, errors.New("Request execution error")
 	}
 	if len(shedules) == 0 {

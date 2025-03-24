@@ -8,7 +8,7 @@ import (
 )
 
 func EndDateCalculate(now time.Time, durationString string) (time.Time, error) {
-	durationSlice := strings.Split(durationString, "")
+	durationSlice := strings.Split(durationString, " ")
 	switch durationSlice[1] {
 	case "d":
 		days, err := strconv.Atoi(durationSlice[0])

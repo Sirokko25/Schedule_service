@@ -16,7 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userid\": 1,\r\n    \"medicine\": \"граммидин\",\r\n    \"period\": 240,\r\n    \"duration\": \"2w\"\r\n}",
+					"raw": "{\r\n    \"userid\": 1,\r\n    \"medicine\": \"граммидин\",\r\n    \"period\": 240,\r\n    \"duration\": \"2 d\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -46,7 +46,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userid\": 1,\r\n    \"medicine\": \"називин\",\r\n    \"period\": 480,\r\n    \"duration\": \"2w\"\r\n}",
+					"raw": "{\r\n    \"userid\": 1,\r\n    \"medicine\": \"називин\",\r\n    \"period\": 480,\r\n    \"duration\": \"12 w\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -106,7 +106,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userid\": 3,\r\n    \"medicine\": \"Гинкоум\",\r\n    \"period\": 1700,\r\n    \"duration\": \"1y\"\r\n}",
+					"raw": "{\r\n    \"userid\": 3,\r\n    \"medicine\": \"Гинкоум\",\r\n    \"period\": 1700,\r\n    \"duration\": \"1 y\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -385,14 +385,6 @@
 						}
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"request": {
-				"method": "GET",
-				"header": []
 			},
 			"response": []
 		}

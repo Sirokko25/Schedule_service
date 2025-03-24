@@ -38,8 +38,8 @@ func (db DB) AppendShedule(Shedule models.Shedule) (int64, error) {
 		resultInterval := helpers.CreateIntervals(now, Shedule.Period)
 		resultIntervalsSlice, err := json.Marshal(resultInterval)
 		if err != nil {
-			log.Print("errorlist.ErrorSerializinJson")
-			return 0, errors.New("errorlist.ErrorSerializinJson")
+			log.Print(errorlist.ErrorSerializinJson)
+			return 0, errors.New(errorlist.ErrorSerializinJson)
 		}
 		storageObject := &ShedulesStruct{MedicineName: Shedule.Medicine, UserId: Shedule.UserId, Period: Shedule.Period, Duration: Shedule.Duration, EndDate: resultDate, Status: "actual", ReceptionTiming: resultIntervalsSlice}
 		var id int64
